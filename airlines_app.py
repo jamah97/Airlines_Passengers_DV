@@ -147,7 +147,7 @@ def main():
     #st.pyplot()
     st.subheader('Correlation heatmap of Customer Experience')
     fig4 = px.imshow(df4.corr(), color_continuous_scale='BuPu', text_auto=True)
-    fig4.update_layout(width=1000, height=1000)
+    fig4.update_layout(width=1200, height=1000)
     st.plotly_chart(fig4)
 
 if __name__ == '__main__':
