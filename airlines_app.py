@@ -38,30 +38,30 @@ def main():
 
     st.subheader('About dataset:')
     st.write("""
-    The dataset consist of 120,000+ airlines passengers overall experience in their travel. There are several metrics analyzing overall customer experience. The list of features are \n
-    Gender (Binary: Male or Female), \n
-    Age (Discrete value),\n
-    Type of customer (Binary: Returning or First-time),\n
-    Type of travel (Binary: Business or Personal),\n
-    Class (Categorical: Business, Economy, Economy Plus),\n
-    Flight Distance (Continuous value),\n
-    Departure Delay (Continuous value),\n
-    Arrival Delay (Continuous value),\n
-    Departure and Arrival Time Convenience (Categorical: 0 to 5 rating),\n
-    Ease of Online Booking (Categorical: 0 to 5 rating),\n
-    Check-in Service (Categorical: 0 to 5 rating),\n
-    Online Boarding (Categorical :0 to 5 rating),\n
-    Gate Location (Categorical: 0 to 5),\n
-    On-board Service (Categorical: 0 to 5 rating),\n
-    Seat Comfort (Categorical: 0 to 5 rating),\n
-    Leg Room Service (Categorical: 0 to 5 rating),\n
-    Cleanliness (Categorical: 0 to 5 rating),\n
-    Food and Drink (Categorical: 0 to 5 rating),\n
-    In-flight Service (Categorical: 0 to 5 rating),\n
-    In-flight Wifi Service (Categorical: 0 to 5 rating),\n
-    In-flight Entertainment (Categorical: 0 to 5 rating),\n
-    Baggage (Categorical: 0 to 5 rating),\n
-    Overall Satisfaction (Binary: Neutral/Dissatisfied or Satisfied),\n
+    The dataset consist of 120,000+ airlines passengers overall experience in their travel. There are several metrics analyzing overall customer experience. The list of features are:
+    - Gender (Binary: Male or Female),
+    - Age (Discrete value)
+    - Type of customer (Binary: Returning or First-time),
+    - Type of travel (Binary: Business or Personal),
+    - Class (Categorical: Business, Economy, Economy Plus),
+    - Flight Distance (Continuous value),
+    - Departure Delay (Continuous value),
+    - Arrival Delay (Continuous value),
+    - Departure and Arrival Time Convenience (Categorical: 0 to 5 rating),
+    - Ease of Online Booking (Categorical: 0 to 5 rating),
+    - Check-in Service (Categorical: 0 to 5 rating),
+    - Online Boarding (Categorical :0 to 5 rating),
+    - Gate Location (Categorical: 0 to 5),
+    - On-board Service (Categorical: 0 to 5 rating),
+    - Seat Comfort (Categorical: 0 to 5 rating),
+    - Leg Room Service (Categorical: 0 to 5 rating),
+    - Cleanliness (Categorical: 0 to 5 rating),
+    - Food and Drink (Categorical: 0 to 5 rating),
+    - In-flight Service (Categorical: 0 to 5 rating),
+    - In-flight Wifi Service (Categorical: 0 to 5 rating),
+    - In-flight Entertainment (Categorical: 0 to 5 rating),
+    - Baggage (Categorical: 0 to 5 rating),
+    - Overall Satisfaction (Binary: Neutral/Dissatisfied or Satisfied),\n
     Link to the dataset can be found at: https://www.kaggle.com/datasets/mysarahmadbhat/airline-passenger-satisfaction
     """)
 
