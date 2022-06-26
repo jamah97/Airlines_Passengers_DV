@@ -12,9 +12,9 @@ import seaborn as sns
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    df = pd.read_csv('airline_passenger_satisfaction.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/jamah97/Airlines_Passengers_DV/main/airline_passenger_satisfaction.csv')
     df = df.dropna(inplace=True)
-    # df.drop(['ID'], axis=1)
+    df = df.drop(['ID'], axis=1)
     df2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class',
        'Departure and Arrival Time Convenience', 'Ease of Online Booking',
        'Check-in Service', 'Online Boarding',
