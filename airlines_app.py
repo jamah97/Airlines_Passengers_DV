@@ -13,7 +13,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     df = pd.read_csv('airline_passenger_satisfaction.csv')
-    df.dropna(Inplace=True)
+    df = df.dropna(inplace=True)
     df = df.drop('ID', axis=1)
     df2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class',
        'Departure and Arrival Time Convenience', 'Ease of Online Booking',
