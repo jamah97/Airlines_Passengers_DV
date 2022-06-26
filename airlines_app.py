@@ -21,11 +21,7 @@ def main():
        'Food and Drink', 'In-flight Service', 'In-flight Wifi Service',
        'In-flight Entertainment', 'Baggage Handling']]
 
-    df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking',
-       'Check-in Service', 'Online Boarding',
-       'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness',
-       'Food and Drink', 'In-flight Service', 'In-flight Wifi Service',
-       'In-flight Entertainment', 'Baggage Handling']]
+    df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking','Check-in Service', 'Online Boarding','On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
 
     outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
 
