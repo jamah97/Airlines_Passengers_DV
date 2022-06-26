@@ -15,7 +15,6 @@ def main():
     df = pd.read_csv('https://raw.githubusercontent.com/jamah97/Airlines_Passengers_DV/main/airline_passenger_satisfaction.csv')
     df = df.dropna(inplace=True)
     df2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class','Departure and Arrival Time Convenience', 'Ease of Online Booking','Check-in Service', 'Online Boarding','On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness','Food and Drink', 'In-flight Service', 'In-flight Wifi Service','In-flight Entertainment', 'Baggage Handling']]
-
     df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking','Check-in Service', 'Online Boarding','On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
 
     outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
