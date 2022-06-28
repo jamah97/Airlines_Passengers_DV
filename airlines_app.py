@@ -18,7 +18,7 @@ def main():
     	#d2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class', 'Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
     	#df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
 
-    	outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
+    	#outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
 
     	st.subheader('Table of Content')
     	st.write('1. About the data')
@@ -64,9 +64,9 @@ def main():
     	st.write('After looking at the boxplots there are several outliers in Flight distance, departure delays and arrival delays. So, lets remove them.')
     	st.write('Data shape before outliers removed', df.shape)
 
-    	all_columns_names2 = outliner_check.columns.tolist()
+    	all_columns_names2 = df.columns.tolist()
     	columnsx1 = st.selectbox("Select Numerical columns to Visualize outliers",all_columns_names2)
-    	fig3 = px.box(outliner_check, y=columnsx1)
+    	fig3 = px.box(df, y=columnsx1)
     	st.plotly_chart(fig3)
 
     	figh = px.histogram(outliner_check, x=columnsx1)
