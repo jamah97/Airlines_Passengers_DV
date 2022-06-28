@@ -15,7 +15,7 @@ def main():
 	
     	df = pd.read_csv('https://raw.githubusercontent.com/jamah97/Airlines_Passengers_DV/main/airline_passenger_satisfaction.csv')
     	df = df.dropna(inplace=True)
-    	df2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class', 'Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
+    	d2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class', 'Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
     	df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
 
     	outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
@@ -109,7 +109,7 @@ def main():
     	st.subheader('Visualizing Customer Experience & Categorical Distribution')
 
 
-    	all_columns_names1 = df2.columns.tolist()
+    	all_columns_names1 = d2.columns.tolist()
     	columnsx = st.selectbox("Select Customer Experience Metric to Visualize its Distribution",all_columns_names1)
     	columns_selected_pie = df.groupby(columnsx)[columnsx].agg(Frequency='count').reset_index()
     	st.write(columns_selected_pie)
