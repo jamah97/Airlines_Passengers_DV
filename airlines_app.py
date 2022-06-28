@@ -15,10 +15,10 @@ def main():
 	
     	df = pd.read_csv('https://raw.githubusercontent.com/jamah97/Airlines_Passengers_DV/main/airline_passenger_satisfaction.csv')
     	df = df.dropna(inplace=True)
-    	#d2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class', 'Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
-    	#df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
+    	d2 = df[['Gender', 'Customer Type', 'Type of Travel', 'Class', 'Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
+    	df4 = df[['Departure and Arrival Time Convenience', 'Ease of Online Booking', 'Check-in Service', 'Online Boarding', 'On-board Service', 'Seat Comfort', 'Leg Room Service', 'Cleanliness', 'Food and Drink', 'In-flight Service', 'In-flight Wifi Service', 'In-flight Entertainment', 'Baggage Handling']]
 
-    	#outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
+    	outliner_check = df[['Age', 'Flight Distance', 'Departure Delay', 'Arrival Delay']]
 
     	st.subheader('Table of Content')
     	st.write('1. About the data')
@@ -64,9 +64,9 @@ def main():
     	st.write('After looking at the boxplots there are several outliers in Flight distance, departure delays and arrival delays. So, lets remove them.')
     	st.write('Data shape before outliers removed', df.shape)
 
-    	all_columns_names2 = df.columns.tolist()
+    	all_columns_names2 = outliner_check.columns.tolist()
     	columnsx1 = st.selectbox("Select Numerical columns to Visualize outliers",all_columns_names2)
-    	fig3 = px.box(df, y=columnsx1)
+    	fig3 = px.box(outliner_check, y=columnsx1)
     	st.plotly_chart(fig3)
 
     	figh = px.histogram(outliner_check, x=columnsx1)
@@ -109,7 +109,7 @@ def main():
     	st.subheader('Visualizing Customer Experience & Categorical Distribution')
 
 
-    	all_columns_names1 = df.columns.tolist()
+    	all_columns_names1 = d2.columns.tolist()
     	columnsx = st.selectbox("Select Customer Experience Metric to Visualize its Distribution",all_columns_names1)
     	columns_selected_pie = df.groupby(columnsx)[columnsx].agg(Frequency='count').reset_index()
     	st.write(columns_selected_pie)
@@ -133,7 +133,7 @@ def main():
 
 #plot corrlation using heatmap
     #plt.figure(figsize=(10,8))
-    #st.write(sns.heatmap(df.corr(),annot= True, cmap = 'BuPu', linewidths=2))
+    #st.write(sns.heatmap(df4.corr(),annot= True, cmap = 'BuPu', linewidths=2))
     #st.pyplot()
     	st.subheader('Correlation heatmap of Customer Experience')
     	fig4 = px.imshow(df4.corr(), color_continuous_scale='BuPu', text_auto=True)
