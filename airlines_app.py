@@ -4,10 +4,8 @@ import numpy as np
 import pandas as pd
 from numpy import percentile
 import matplotlib.pyplot as plt
-import plotly.figure_factory as ff
 import plotly.graph_objects as go
 import plotly.express as px
-from matplotlib import pyplot
 import seaborn as sns
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
